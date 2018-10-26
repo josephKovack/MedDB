@@ -5,7 +5,8 @@ Then run
 ```
 bundler install
 rails db:create
-rails db:schema:load```
+rails db:schema:load
+```
 To install gems and to create and migrate the database.
 
 TODO: This stuff
