@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @medical_record.ssn %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @medical_record.first_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @medical_record.middle_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @medical_record.last_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @medical_record.dob %>
+</p>
+
+<p>
+  <strong>Family history:</strong>
+  <%= @medical_record.family_history %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @medical_record.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @medical_record.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @medical_record.state %>
+</p>
+
+<p>
+  <strong>Existing cond:</strong>
+  <%= @medical_record.existing_cond %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @medical_record.allergies %>
+</p>
+
+<p>
+  <strong>Medications:</strong>
+  <%= @medical_record.medications %>
+</p>
+
+<p>
+  <strong>Hcp:</strong>
+  <%= @medical_record.hcp_id %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @medical_record.telephone %>
+</p>
+
+<p>
+  <strong>Doctor first name:</strong>
+  <%= @medical_record.doctor_first_name %>
+</p>
+
+<p>
+  <strong>Doctor last name:</strong>
+  <%= @medical_record.doctor_last_name %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @medical_record.employee_id %>
+</p>
+
+<p>
+  <strong>Fasting:</strong>
+  <%= @medical_record.fasting %>
+</p>
+
+<%= link_to 'Edit', edit_medical_record_path(@medical_record) %> |
+<%= link_to 'Back', medical_records_path %>

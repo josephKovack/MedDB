@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hcp:</strong>
+  <%= @health_care_provider.hcp_id %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @health_care_provider.company_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @health_care_provider.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @health_care_provider.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @health_care_provider.state %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @health_care_provider.telephone %>
+</p>
+
+<%= link_to 'Edit', edit_health_care_provider_path(@health_care_provider) %> |
+<%= link_to 'Back', health_care_providers_path %>

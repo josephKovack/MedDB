@@ -1,0 +1,47 @@
+<%= form_with(model: health_care_provider, local: true) do |form| %>
+  <% if health_care_provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health_care_provider.errors.count, "error") %> prohibited this health_care_provider from being saved:</h2>
+
+      <ul>
+      <% health_care_provider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :hcp_id %>
+    <%= form.number_field :hcp_id, id: :health_care_provider_hcp_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name, id: :health_care_provider_company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :health_care_provider_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :health_care_provider_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :health_care_provider_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone, id: :health_care_provider_telephone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

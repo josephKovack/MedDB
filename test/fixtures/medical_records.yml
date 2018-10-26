@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ssn: 1
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  dob: 2018-10-11
+  family_history: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  existing_cond: MyString
+  allergies: MyString
+  medications: MyString
+  hcp_id: 1
+  telephone: 1
+  doctor_first_name: MyString
+  doctor_last_name: MyString
+  employee_id: 1
+  fasting: false
+
+two:
+  ssn: 1
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  dob: 2018-10-11
+  family_history: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  existing_cond: MyString
+  allergies: MyString
+  medications: MyString
+  hcp_id: 1
+  telephone: 1
+  doctor_first_name: MyString
+  doctor_last_name: MyString
+  employee_id: 1
+  fasting: false

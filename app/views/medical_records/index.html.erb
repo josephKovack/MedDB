@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medical Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ssn</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th>Dob</th>
+      <th>Family history</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Existing cond</th>
+      <th>Allergies</th>
+      <th>Medications</th>
+      <th>Hcp</th>
+      <th>Telephone</th>
+      <th>Doctor first name</th>
+      <th>Doctor last name</th>
+      <th>Employee</th>
+      <th>Fasting</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medical_records.each do |medical_record| %>
+      <tr>
+        <td><%= medical_record.ssn %></td>
+        <td><%= medical_record.first_name %></td>
+        <td><%= medical_record.middle_name %></td>
+        <td><%= medical_record.last_name %></td>
+        <td><%= medical_record.dob %></td>
+        <td><%= medical_record.family_history %></td>
+        <td><%= medical_record.address %></td>
+        <td><%= medical_record.city %></td>
+        <td><%= medical_record.state %></td>
+        <td><%= medical_record.existing_cond %></td>
+        <td><%= medical_record.allergies %></td>
+        <td><%= medical_record.medications %></td>
+        <td><%= medical_record.hcp_id %></td>
+        <td><%= medical_record.telephone %></td>
+        <td><%= medical_record.doctor_first_name %></td>
+        <td><%= medical_record.doctor_last_name %></td>
+        <td><%= medical_record.employee_id %></td>
+        <td><%= medical_record.fasting %></td>
+        <td><%= link_to 'Show', medical_record %></td>
+        <td><%= link_to 'Edit', edit_medical_record_path(medical_record) %></td>
+        <td><%= link_to 'Destroy', medical_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medical Record', new_medical_record_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: hospital, local: true) do |form| %>
+  <% if hospital.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hospital.errors.count, "error") %> prohibited this hospital from being saved:</h2>
+
+      <ul>
+      <% hospital.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :hospital_id %>
+    <%= form.number_field :hospital_id, id: :hospital_hospital_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hospital_name %>
+    <%= form.text_field :hospital_name, id: :hospital_hospital_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :hospital_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :hospital_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :hospital_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.number_field :telephone, id: :hospital_telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hospital_type %>
+    <%= form.text_field :hospital_type, id: :hospital_hospital_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

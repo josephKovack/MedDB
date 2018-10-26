@@ -1,0 +1,107 @@
+<%= form_with(model: medical_record, local: true) do |form| %>
+  <% if medical_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medical_record.errors.count, "error") %> prohibited this medical_record from being saved:</h2>
+
+      <ul>
+      <% medical_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ssn %>
+    <%= form.number_field :ssn, id: :medical_record_ssn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :medical_record_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name, id: :medical_record_middle_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :medical_record_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob, id: :medical_record_dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :family_history %>
+    <%= form.text_field :family_history, id: :medical_record_family_history %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :medical_record_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :medical_record_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :medical_record_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :existing_cond %>
+    <%= form.text_field :existing_cond, id: :medical_record_existing_cond %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allergies %>
+    <%= form.text_field :allergies, id: :medical_record_allergies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medications %>
+    <%= form.text_field :medications, id: :medical_record_medications %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hcp_id %>
+    <%= form.number_field :hcp_id, id: :medical_record_hcp_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.number_field :telephone, id: :medical_record_telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doctor_first_name %>
+    <%= form.text_field :doctor_first_name, id: :medical_record_doctor_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doctor_last_name %>
+    <%= form.text_field :doctor_last_name, id: :medical_record_doctor_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.number_field :employee_id, id: :medical_record_employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fasting %>
+    <%= form.check_box :fasting, id: :medical_record_fasting %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
