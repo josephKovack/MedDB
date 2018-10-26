@@ -1,11 +1,11 @@
 Setup
-Copy config/database.yml.template to config/database.yml and fill in your database credentials. If you have your MySQL username and password exported to environment variables MYSQL_USER and MYSQL_PASS you don't need to do anything more than copy the template.
+Copy `config/database.yml.template` to `config/database.yml` and fill in your database credentials. If you have your MySQL username and password exported to environment variables MYSQL_USER and MYSQL_PASS you don't need to do anything more than copy the template.
 
 Then run
-
+```
 bundler install
 rails db:create
-rails db:schema:load
+rails db:schema:load```
 To install gems and to create and migrate the database.
 
 TODO: This stuff
