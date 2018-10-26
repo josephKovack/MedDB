@@ -7,6 +7,25 @@ bundler install
 rails db:create
 rails db:schema:load
 ```
+Make your own branch as not to mess up the master
+branch makes a branch
+checkout switches to the branch so you are not workin in master
+```
+git branch [name of branch]
+
+git checkout [name of branch]
+
+```
+After you are done with your changes you can use these commands to push your work to the repository
+```
+git add .
+
+git commit -m "Commit message here"
+
+git push origin [branch name]
+
+```
+
 To install gems and to create and migrate the database.
 
 TODO: This stuff
