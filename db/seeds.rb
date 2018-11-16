@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Hospital.create!(hospital_id: '1', hospital_name: 'Our Hope', address: '123 Easy street', city: 'Normal', state: 'Illinois', hospital_type: 'Clinic')
-Employee.create!(last_name: 'Nebanda', first_name: 'Mary', start_date: Date.new(1998,1,15))
+#  Hospital.create!(hospital_id: '1', hospital_name: 'Our Hope', address: '123 Easy street', city: 'Normal', state: 'Illinois', hospital_type: 'Clinic')
+#  Employee.create!(last_name: 'Nebanda', first_name: 'Mary', start_date: Date.new(1998,1,15))
 
 # Student.create!(last_name: 'Jefferson', first_name: 'Billy', enrollment_date: Date.new(2002,8,10))
 
@@ -23,3 +23,11 @@ Employee.create!(last_name: 'Nebanda', first_name: 'Mary', start_date: Date.new(
 # Enrollment.create!(grade: 'A', student_id: Student.last.id, course_id: Course.last.id)
 
 # Enrollment.create!(grade: 'B', student_id: Student.first.id, course_id: Course.first.id)
+#require 'faker'
+
+#Faker::Name.name      #=> "Christophe Bartell"
+
+#Faker::Internet.email #=> "kirsten.greenholt@corkeryfisher.info"
+
+#100.times do
+#  Hospital.create(hospital_id: Faker::Number.number, address: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state_abbr)
