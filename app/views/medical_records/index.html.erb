@@ -49,13 +49,13 @@
         <td><%= medical_record.employee_id %></td>
         <td><%= medical_record.fasting %></td>
         <td><%= link_to 'Show', medical_record %></td>
-        <td><%= link_to 'Edit', edit_medical_record_path(medical_record) %></td>
-        <td><%= link_to 'Destroy', medical_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<a href="/">Home</a>
+<a class="pjax" href="/admin/">admin</a>
 <%= link_to 'New Medical Record', new_medical_record_path %>

@@ -25,13 +25,12 @@
         <td><%= health_care_provider.state %></td>
         <td><%= health_care_provider.telephone %></td>
         <td><%= link_to 'Show', health_care_provider %></td>
-        <td><%= link_to 'Edit', edit_health_care_provider_path(health_care_provider) %></td>
-        <td><%= link_to 'Destroy', health_care_provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Health Care Provider', new_health_care_provider_path %>
+<a href="/">Home</a>
+<a class="pjax" href="/admin/">admin</a>

@@ -1,3 +1,3 @@
 class Patient < ApplicationRecord
-  belongs_to :MedicalRecord
+  #belongs_to :MedicalRecord
 end
