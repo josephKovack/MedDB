@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181109151140) do
+ActiveRecord::Schema.define(version: 20181212044337) do
 
-  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.integer "employee_id"
     t.string "first_name"
     t.string "last_name"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20181109151140) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "health_care_providers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "health_care_providers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.integer "hcp_id"
     t.string "company_name"
     t.string "address"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20181109151140) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "hospitals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "hospitals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.integer "hospital_id"
     t.string "hospital_name"
     t.string "address"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20181109151140) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "medical_records", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "medical_records", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.integer "ssn"
     t.string "first_name"
     t.string "middle_name"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20181109151140) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string "fname"
     t.string "lname"
     t.string "reason"
@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 20181109151140) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -95,6 +95,16 @@ ActiveRecord::Schema.define(version: 20181109151140) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_trigger("medical_records_after_insert_row_tr", :generated => true, :compatibility => 1).
+      on("medical_records").
+      after(:insert) do
+    <<-SQL_ACTIONS
+        UPDATE medical_records SET allergies = 'No allergies'
+
+    WHERE medical_records.allergies = NULL;
+    SQL_ACTIONS
   end
 
 end
