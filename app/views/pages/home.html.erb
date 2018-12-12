@@ -1,16 +1,31 @@
-<h1>home page</h1>
+<h1>Rush Copley Medical Database</h1>
+<header>
+
+
+<h2>Home</h2>
+<br>
 <a class="pjax" href="/admin/">admin</a>
 <br>
 <a href="/users/sign_up">Sign up</a>
 <br>
 <a href="/users/sign_in">Sign in</a>
-<br>
+</header>
+<body>
+<ul>
+<li>
 <%= link_to 'employees', employees_path %>
-<br>
+</li>
+<li>
 <%= link_to 'health care providers', health_care_providers_path %>
-<br>
+</li>
+<li>
 <%= link_to 'hospital', hospitals_path %>
-<br>
+</li>
+<li>
 <%= link_to 'patients', patients_path %>
-<br>
+</li>
+<li>
 <%= link_to 'medical records', medical_records_path %>
+</li>
+</ul>
+</body>
